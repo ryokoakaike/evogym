@@ -92,11 +92,11 @@ public:
 	vector<SimObject*>* get_objects();
 	Robot* get_robot(string robot_name);
 
-	Ref <MatrixXd> get_pos_at_time(long int sim_time);
-	Ref <MatrixXd> get_vel_at_time(long int sim_time);
+	Matrix <double, 2, Dynamic> get_pos_at_time(long int sim_time);
+	Matrix <double, 2, Dynamic> get_vel_at_time(long int sim_time);
 
-	Ref <MatrixXd> object_pos_at_time(long int sim_time, string object_name);
-	Ref <MatrixXd> object_vel_at_time(long int sim_time, string object_name);
+	Matrix <double, 2, Dynamic> object_pos_at_time(long int sim_time, string object_name);
+	Matrix <double, 2, Dynamic> object_vel_at_time(long int sim_time, string object_name);
 	double object_orientation_at_time(long int sim_time, string object_name);
 	void translate_object(double x, double y, string object_name);
 

@@ -42,10 +42,10 @@ public:
 	void force_save();
 	void revert(long int sim_time);
 	int get_time();
-	Ref <MatrixXd> pos_at_time(long int sim_time);
-	Ref <MatrixXd> vel_at_time(long int sim_time);
-	Ref <MatrixXd> object_pos_at_time(long int sim_time, string object_name);
-	Ref <MatrixXd> object_vel_at_time(long int sim_time, string object_name);
+	Matrix <double, 2, Dynamic> pos_at_time(long int sim_time);
+	Matrix <double, 2, Dynamic> vel_at_time(long int sim_time);
+	Matrix <double, 2, Dynamic> object_pos_at_time(long int sim_time, string object_name);
+	Matrix <double, 2, Dynamic> object_vel_at_time(long int sim_time, string object_name);
 	double object_orientation_at_time(long int sim_time, string object_name);
 	void translate_object(double x, double y, string object_name);
 	Ref <MatrixXi> get_actuator_indices(string robot_name);
